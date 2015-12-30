@@ -1,5 +1,10 @@
 <div>
-	this is carousel.
+	<!-- <img ng-src="./metamorphosis/_img/cs1.png" alt="carousel..."> -->
+	<uib-carousel interval="crsInterval" no-wrap="noWrapSlides">
+		<uib-slide ng-repeat="slideHere in crsSlides track by $index" active="slideHere.active">
+			<img ng-src="{{slideHere.lane}}">
+		</uib-slide>
+	</uib-carousel>
 	<p>
 		<a ui-sref="home" class="btn btn-danger">Home</a>
 		<a ui-sref="gallery" class="btn btn-success">Gallery</a>

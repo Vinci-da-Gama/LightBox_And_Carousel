@@ -67,10 +67,6 @@
 
 })();
 (function () {
-	var cosM = angular.module('lbc.constant');
-
-})();
-(function () {
 	var ctrlM = angular.module('lbc.ctrl');
 
 	ctrlM.controller('homeDefaultCtrl', ['$scope', function($scope){
@@ -95,7 +91,19 @@
 
 	ctrlM.controller('carouselCtrl', ['$scope', function($scope){
 		console.log('carouselCtrl');
+		$scope.crsInterval = 3000;
+		$scope.noWrapSlides = false;
+		$scope.crsSlides = [
+			{lane: "../metamorphosis/_img/cs0.png"},
+			{lane: "../metamorphosis/_img/cs1.png"},
+			{lane: "../metamorphosis/_img/cs2.png"},
+			{lane: "../metamorphosis/_img/cs3.jpeg"}
+		];
 	}]);
+
+})();
+(function () {
+	var cosM = angular.module('lbc.constant');
 
 })();
 (function () {
