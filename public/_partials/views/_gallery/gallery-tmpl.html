@@ -1,5 +1,11 @@
 <div>
-	This is Gallery.
+	<ul class="lightbox-gallery">
+		<li ng-repeat="thubbox in thumbboxList">
+			<a ng-click="openThumbModalByIndex($index)">
+				<img ng-src="{{thubbox.thumbUrl}}" alt="thumbbox" class="img-thumbnail">
+			</a>
+		</li>
+	</ul>
 	<p>
 		<a ui-sref="home" class="btn btn-info">Home</a>
 		<a ui-sref="carousel" class="btn btn-warning">Carousel</a>

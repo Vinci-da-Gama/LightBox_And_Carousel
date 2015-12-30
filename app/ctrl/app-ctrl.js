@@ -17,8 +17,19 @@
 		console.log('homeVcCtrl');
 	}]);
 
-	ctrlM.controller('galleryCtrl', ['$scope', function($scope){
+	ctrlM.controller('galleryCtrl', ['$scope', 'Lightbox', function($scope, Lightbox){
 		console.log('galleryCtrl');
+		$scope.thumbboxList = [
+			{url: "./metamorphosis/_img/magicCycle0.png", thumbUrl: "./metamorphosis/_img/magicCycle0.png", caption: "This is description 0."},
+			{url: "./metamorphosis/_img/magicCycle1.png", thumbUrl: "./metamorphosis/_img/magicCycle1.png", caption: "the is description 1."},
+			{url: "./metamorphosis/_img/magicCycle2.png", thumbUrl: "./metamorphosis/_img/magicCycle2.png", caption: "This is description 2."},
+			{url: "./metamorphosis/_img/magicCycle3.png", thumbUrl: "./metamorphosis/_img/magicCycle3.png", caption: "the is description 3."}
+		];
+
+		$scope.openThumbModalByIndex = function (idx) {
+			Lightbox.openModal($scope.thumbboxList, idx);
+		};
+
 	}]);
 
 	ctrlM.controller('carouselCtrl', ['$scope', function($scope){
